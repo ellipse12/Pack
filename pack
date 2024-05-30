@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 export PACK_PATH="$HOME/.pack"
 dir="$(dirname "$0")"
-python3 $dir/pack.py -f "PACK_PATH/pack.toml" "$@"
+python3 $dir/pack.py -f $PACK_PATH/pack.toml "$@"
 

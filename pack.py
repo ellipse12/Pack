@@ -113,8 +113,15 @@ def install(args):
 # removes a package from the declared list NOTE: Does not uninstall the package
 #CMD
 def remove(args):
-    pass
-
+    config = read_config()
+    global_packages = get_global_packages(config)
+    if args.package not in global_packages:
+        print("Nothing to remove: package does not exist")
+        return
+    else:
+        global_packages.remove(args.package)
+        print("Package successfully remove")
+        write_config(toml.dumps(config))
 # adds a package to the declared list
 #CMD
 def add(args):
@@ -146,6 +153,7 @@ def run_arbitrary(args):
 
 #creates the argument parser for pack, also the entry point
 def setup_parser():
+    global toml_file
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(required=True, help="Action help")
     # changes the file to FILE
