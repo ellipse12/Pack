@@ -1,6 +1,6 @@
 # Pack
 A simple declarative package manager
-> [!WARNIN]
+> [!WARNING]
 > Pack is in its early stages of development, not all functionality has been implemented. Expect Bugs!
 
 # Requirements
