@@ -1,7 +1,7 @@
 # Pack
 A simple declarative package manager
-[!WARNING]
-Pack is in its early stages of development, not all functionality has been implemented. Expect Bugs!
+> [!WARNIN]
+> Pack is in its early stages of development, not all functionality has been implemented. Expect Bugs!
 
 # Requirements
 Pack requires python 3.x and also requires tomlkit to be installed. TomlKit can be installed using a python package manager, such as pip
