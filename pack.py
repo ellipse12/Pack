@@ -132,12 +132,12 @@ def add(args):
         print(f"Package: {args.package} already exists.")
         return
     else:
-        if args.package in system_packages:
-            global_packages.add_line(args.package, indent=" ", add_comma = False, newline=False)
-            write_config(toml.dumps(config))
-            print(f"{args.package}, add successfuly")
-        else:
-            print(f"Package: {args.package} does not have a system equivalent")
+        if args.package not in system_packages:
+            system_packages.add(args.package, args.package)
+            print(f"Package: {args.package} had no system equivalent so it was added to the current one as {args.package}=\"{args.package}\"")
+        global_packages.add_line(args.package, indent=" ", add_comma = False, newline=False)
+        write_config(toml.dumps(config))
+        print(f"{args.package}, add successfuly")
 
 # edits the pack.toml file given an optional editor
 #CMD
