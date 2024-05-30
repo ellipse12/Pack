@@ -5,11 +5,7 @@ import sys
 import subprocess
 import re
 import tomlkit as toml
-home = os.environ.get('HOME')
-path =  os.environ.get('PACK_PATH', home + '/.pack') 
-toml_file = path + '/pack.toml'
-lock_file = path + '/pack.lock'
-
+toml_file = "pack.toml"
 class PackTemplate:
     def __init__(self, string):
         self._string = string
@@ -123,6 +119,7 @@ def run_arbitrary(args):
 def setup_parser():
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(required=True, help="Action help")
+    parser.add_argument("-f", "--file", help="The file to use as a config")
     #install
     sub_install = sub.add_parser("install", help="installs any new packages in pack.toml").set_defaults(func=install)
     #clean
@@ -146,6 +143,8 @@ def setup_parser():
     sub_run.set_defaults(func=run_arbitrary)
 
     args = parser.parse_args()
+    if args.file:
+        toml_file = args.file
     args.func(args)
 
 
