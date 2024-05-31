@@ -11,7 +11,7 @@ pip install tomlkit
 See [installation](https://github.com/ellipse12/Pack/wiki/Installation) for installation help.
 
 Pack works with TOML to provide a declarative way to list your packages. An example configuration on a debian based system might be:
-```TOML
+```toml
 [pack]
 system = "apt"
 packages = ["nvim", "git", "vscode"]
