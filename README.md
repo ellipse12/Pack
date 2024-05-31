@@ -8,9 +8,9 @@ Pack requires python 3.x and also requires tomlkit to be installed. TomlKit can 
 pip install tomlkit
 ```
 # Getting Started
-To get started with pack download _pack.py_ and run it using `python3 pack.py [options]` by default pack will search the current directatory for a `pack.toml` file. Alternatively a bash script has been provided that will set the search directetory to be at "$HOME/.pack" and then you will just need to call it using `pack` without the python syntax. (note you will likely have to change the permissions of the bash script using something like: `chmod u+x pack`)
+See [installation](https://github.com/ellipse12/Pack/wiki/Installation) for installation help.
 
-Pack works with TOML to provide a declarative way to list your packages out. An example configuration might be:
+Pack works with TOML to provide a declarative way to list your packages. An example configuration on a debian based system might be:
 ```TOML
 [pack]
 system = "apt"
