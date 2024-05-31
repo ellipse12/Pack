@@ -5,11 +5,12 @@ import os
 import sys
 import subprocess
 import re
+import datetime as date
 import tomlkit as toml
 ###
 
 toml_file = "pack.toml"
-
+lock_file = "pack.lock"
 
 # A string template for the syntax ${any.any} to access anything within the pack.toml config
 class PackTemplate:
@@ -54,14 +55,16 @@ def open_toml(file: str):
     with open(file, mode="rb") as fp:
         out = toml.load(fp)
     return out
+def write_toml(file: str, data: str):
+    with open(file, mode="w") as fp:
+        fp.write(data)
 #a wrapper around open_toml; TODO: remove
 def read_config():
     return open_toml(toml_file)
 
 # writes the config to pack.toml
 def write_config(data: str):
-    with open(toml_file, mode="w") as fp:
-        fp.write(data)
+    write_toml(toml_file, data)
 
 # gets the current system in use (e.g. apt, pacman, ...)
 def get_current_system(config):
@@ -80,13 +83,65 @@ def get_system_packages(config):
 #get all of the defined packages in [pack]
 def get_global_packages(config):
     return config.get("pack").get("packages")
+
+def get_package_id(global_packages, system_packages, package):
+    gpack = package in global_packages
+    spack = system_packages.get(package)
+    if not gpack or not spack:
+        return None
+    return spack
+def get_package_ids(global_packages, system_packages):
+    out = []
+    for i in global_packages:
+        out.append(get_package_id(global_packages, system_packages, i))
+    return out
+def create_lock(config):
+   lock = toml.document()
+   lock.add(toml.comment("Pack lock file"))
+   lock.add("system", config.get("pack").get("system"))
+   lock.add("date", date.datetime.now())
+   global_packages = get_global_packages(config)
+   system_packages = get_system_packages(config)
+   pack = toml.table()
+   pack["packages"] = []
+   for gpack in global_packages:
+       spack = system_packages.get(gpack)
+       pack["packages"].add_line(spack, indent=" ", add_comma = False, newline=False)
+   lock.add("pack", pack) 
+   return lock
+def read_or_create_lock(config):
+    if os.path.isfile(lock_file):
+        return open_toml(lock_file)
+    else:
+        return create_lock(config)
+    
+
 # uninstalls all of the remove packages TODO: implement lock file and clean
 def clean(args):
-    pass
+    config = read_config()
+    lock = read_or_create_lock(config)
+    lock_packages = lock.get("pack").get("packages")
+    if not config:
+        print("No config found")
+        return
+    system_packages = get_system_packages(config)
+    global_packages = get_global_packages(config)
+    package_ids = get_package_ids(global_packages, system_packages)
+    if global_packages and system_packages:
+        for i in lock_packages:
+            if i not in package_ids:
+                run_command("uninstall", config, create_global_package_args(i, i, config.get("pack").get("system")))
+
+    write_toml(lock_file, toml.dumps(create_lock(config)))
+
+
 
 # runs an arbitrary command with the given global arguments
 def run_command(cmd, config, args=None):
     command = get_current_system(config).get("commands").get(cmd)
+    if not command:
+        print(f"Command: {cmd}, does not exist or has not been implemented")
+        exit(1)
     dk = config.unwrap()
     if args:
         dk.update(args)
@@ -94,13 +149,15 @@ def run_command(cmd, config, args=None):
     subprocess.run(template.split())
 
 # helper function to create the global package dictionary for use in commands
-def create_global_package_args(id, name, system):
-    return {"package":{"id":id, "name":name, "system":system}}
+def create_global_package_args(id, name):
+    return {"package":{"id":id, "name":name}}
 
 # installs all of the declared packages TODO: add lock file support
 #CMD
 def install(args):
     config = read_config()
+    lock = read_or_create_lock(config).get("pack").get("packages")
+
     if not config:
         print("No config found")
         return
@@ -108,8 +165,11 @@ def install(args):
     global_packages = get_global_packages(config)
     if global_packages and system_packages:
         for i in global_packages.unwrap():
-            if i in system_packages:
-                run_command("install", config, create_global_package_args(system_packages.get(i), i, config.get("pack").get("system")))
+            sys_pack = get_package_id(global_packages, system_packages, i)
+            if sys_pack not in lock:
+                run_command("install", config, create_global_package_args(system_packages.get(i), i))
+    write_toml(lock_file, toml.dumps(create_lock(config)))
+
 # removes a package from the declared list NOTE: Does not uninstall the package
 #CMD
 def remove(args):
@@ -142,7 +202,10 @@ def add(args):
 # edits the pack.toml file given an optional editor
 #CMD
 def edit(args):
-    out = subprocess.run([args.editor, toml_file])
+    editor = os.environ.get("EDITOR", "nano")
+    if args.editor:
+        editor = args.editor
+    out = subprocess.run([editor, toml_file])
 
 # runs an arbitrary command in the system.*.commands list
 #CMD
@@ -154,6 +217,7 @@ def run_arbitrary(args):
 #creates the argument parser for pack, also the entry point
 def setup_parser():
     global toml_file
+    global lock_file
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(required=True, help="Action help")
     # changes the file to FILE
@@ -172,7 +236,7 @@ def setup_parser():
     sub_add.add_argument("package", help="the package to add")
     #edit
     sub_edit = sub.add_parser("edit", help="edit the pack.toml file")
-    sub_edit.add_argument("editor", help="the editor to use, defaults to nano", nargs="?", default="nano")
+    sub_edit.add_argument("editor", help="the editor to use, defaults to nano", nargs="?")
     sub_edit.set_defaults(func=edit)
     
     #run
@@ -183,6 +247,8 @@ def setup_parser():
     args = parser.parse_args()
     if args.file:
         toml_file = args.file
+        lock_file = args.file.replace(".toml", ".lock")
+        print(lock_file)
     args.func(args)
 
 
