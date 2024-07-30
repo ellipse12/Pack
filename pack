@@ -60,9 +60,6 @@ def open_toml(file: str):
 def write_toml(file: str, data: str):
     with open(file, mode="w") as fp:
         fp.write(data)
-#a wrapper around open_toml; TODO: remove
-def read_config():
-    return open_toml(toml_file)
 
 # writes the config to pack.toml
 def write_config(data: str):
@@ -120,7 +117,7 @@ def read_or_create_lock(config):
 
 # uninstalls all of the remove packages TODO: implement lock file and clean
 def clean(args):
-    config = read_config()
+    config = open_toml(toml_file)
     lock = read_or_create_lock(config)
     lock_packages = lock.get("pack").get("packages")
     if not config:
@@ -157,7 +154,7 @@ def create_global_package_args(id, name):
 # installs all of the declared packages TODO: add lock file support
 #CMD
 def install(args):
-    config = read_config()
+    config = open_toml(toml_file)
     lock = read_or_create_lock(config).get("pack").get("packages")
 
     if not config:
@@ -175,7 +172,7 @@ def install(args):
 # removes a package from the declared list NOTE: Does not uninstall the package
 #CMD
 def remove(args):
-    config = read_config()
+    config = open_toml(toml_file)
     global_packages = get_global_packages(config)
     if args.package not in global_packages:
         print("Nothing to remove: package does not exist")
@@ -187,7 +184,7 @@ def remove(args):
 # adds a package to the declared list
 #CMD
 def add(args):
-    config = read_config()
+    config = open_toml(toml_file)
     system_packages = get_system_packages(config)
     global_packages = get_global_packages(config)
     if args.package in global_packages:
@@ -212,7 +209,7 @@ def edit(args):
 # runs an arbitrary command in the system.*.commands list
 #CMD
 def run_arbitrary(args):
-    config = read_config()
+    config = open_toml(toml_file)
     run_command(args.command, config) 
 
 
