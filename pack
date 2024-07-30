@@ -151,7 +151,7 @@ def run_command(cmd, config, args=None):
 def create_global_package_args(id, name):
     return {"package":{"id":id, "name":name}}
 
-# installs all of the declared packages TODO: add lock file support
+# installs all of the declared packages 
 #CMD
 def install(args):
     config = open_toml(toml_file)
@@ -211,7 +211,12 @@ def edit(args):
 def run_arbitrary(args):
     config = open_toml(toml_file)
     run_command(args.command, config) 
-
+#removes lock file
+#CMD
+def clear(args):
+    lock = open_toml(lock_file)
+    if os.path.exists(lock_file):
+        os.remove(lock_file)
 
 #creates the argument parser for pack, also the entry point
 def setup_parser():
@@ -223,6 +228,8 @@ def setup_parser():
     sub_install = sub.add_parser("install", help="installs any new packages in pack.toml").set_defaults(func=install)
     #clean
     sub_clean = sub.add_parser("clean", help="uninstalls removed programs").set_defaults(func=clean)
+    #clear
+    sub_clear = sub.add_parser("clear", help="Removes lock file").set_defaults(func=clear)
     #remove
     sub_remove = sub.add_parser("remove", help="remove a program from the list (does not uninstall it)")
     sub_remove.set_defaults(func=remove)
