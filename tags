@@ -1,0 +1,210 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/ellipse12/.home/pack_project/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+0	wiki/.obsidian/core-plugins.json	/^  "file-explorer",$/;"	s
+0	wiki/.obsidian/workspace.json	/^          {$/;"	o	array:left.children.0.children
+0	wiki/.obsidian/workspace.json	/^          {$/;"	o	array:main.children.0.children
+0	wiki/.obsidian/workspace.json	/^          {$/;"	o	array:right.children.0.children
+0	wiki/.obsidian/workspace.json	/^      {$/;"	o	array:left.children
+0	wiki/.obsidian/workspace.json	/^      {$/;"	o	array:main.children
+0	wiki/.obsidian/workspace.json	/^      {$/;"	o	array:right.children
+0	wiki/.obsidian/workspace.json	/^    "Home.md",$/;"	s	array:lastOpenFiles
+1	wiki/.obsidian/core-plugins.json	/^  "global-search",$/;"	s
+1	wiki/.obsidian/workspace.json	/^          {$/;"	o	array:left.children.0.children
+1	wiki/.obsidian/workspace.json	/^          {$/;"	o	array:right.children.0.children
+1	wiki/.obsidian/workspace.json	/^    "Guide.md",$/;"	s	array:lastOpenFiles
+10	wiki/.obsidian/core-plugins.json	/^  "templates",$/;"	s
+11	wiki/.obsidian/core-plugins.json	/^  "note-composer",$/;"	s
+12	wiki/.obsidian/core-plugins.json	/^  "command-palette",$/;"	s
+13	wiki/.obsidian/core-plugins.json	/^  "editor-status",$/;"	s
+14	wiki/.obsidian/core-plugins.json	/^  "bookmarks",$/;"	s
+15	wiki/.obsidian/core-plugins.json	/^  "outline",$/;"	s
+16	wiki/.obsidian/core-plugins.json	/^  "word-count",$/;"	s
+17	wiki/.obsidian/core-plugins.json	/^  "file-recovery"$/;"	s
+2	wiki/.obsidian/core-plugins.json	/^  "switcher",$/;"	s
+2	wiki/.obsidian/workspace.json	/^          {$/;"	o	array:left.children.0.children
+2	wiki/.obsidian/workspace.json	/^          {$/;"	o	array:right.children.0.children
+2	wiki/.obsidian/workspace.json	/^    "Quick Start.md",$/;"	s	array:lastOpenFiles
+3	wiki/.obsidian/core-plugins.json	/^  "graph",$/;"	s
+3	wiki/.obsidian/workspace.json	/^          {$/;"	o	array:right.children.0.children
+3	wiki/.obsidian/workspace.json	/^    "Installation.md"$/;"	s	array:lastOpenFiles
+4	wiki/.obsidian/core-plugins.json	/^  "backlink",$/;"	s
+5	wiki/.obsidian/core-plugins.json	/^  "canvas",$/;"	s
+6	wiki/.obsidian/core-plugins.json	/^  "outgoing-link",$/;"	s
+7	wiki/.obsidian/core-plugins.json	/^  "tag-pane",$/;"	s
+8	wiki/.obsidian/core-plugins.json	/^  "page-preview",$/;"	s
+9	wiki/.obsidian/core-plugins.json	/^  "daily-notes",$/;"	s
+Commands	wiki/Quick Start.md	/^### Commands$/;"	S
+Editing	wiki/Installation.md	/^# Editing$/;"	c
+Getting Started	README.md	/^# Getting Started$/;"	c
+Macros	wiki/Guide.md	/^## Macros$/;"	s
+Pack	README.md	/^# Pack$/;"	c
+Pack.toml	wiki/Guide.md	/^## Pack.toml$/;"	s
+PackTemplate	pack.py	/^class PackTemplate:$/;"	c
+Requirements	README.md	/^# Requirements$/;"	c
+__init__	pack.py	/^    def __init__(self, string):$/;"	m	class:PackTemplate
+__match_all__	pack.py	/^    def __match_all__(self, regex, string):$/;"	m	class:PackTemplate
+__match_all_dummy__	pack.py	/^        def __match_all_dummy__(regex, string, array):$/;"	f	member:PackTemplate.__match_all__	file:
+accentColor	wiki/.obsidian/appearance.json	/^  "accentColor": ""$/;"	s
+active	wiki/.obsidian/workspace.json	/^  "active": "bb8bfadea6abdce1",$/;"	s
+add	pack.py	/^def add(args):$/;"	f
+audio-recorder	wiki/.obsidian/core-plugins-migration.json	/^  "audio-recorder": false,$/;"	b
+backlink	wiki/.obsidian/core-plugins-migration.json	/^  "backlink": true,$/;"	b
+backlinkCollapsed	wiki/.obsidian/workspace.json	/^                "backlinkCollapsed": false,$/;"	b	object:right.children.0.children.0.state.state
+bookmarks	wiki/.obsidian/core-plugins-migration.json	/^  "bookmarks": true,$/;"	b
+canvas	wiki/.obsidian/core-plugins-migration.json	/^  "canvas": true,$/;"	b
+canvas:Create new canvas	wiki/.obsidian/workspace.json	/^      "canvas:Create new canvas": false,$/;"	b	object:left-ribbon.hiddenItems
+children	wiki/.obsidian/workspace.json	/^        "children": [$/;"	a	object:left.children.0
+children	wiki/.obsidian/workspace.json	/^        "children": [$/;"	a	object:main.children.0
+children	wiki/.obsidian/workspace.json	/^        "children": [$/;"	a	object:right.children.0
+children	wiki/.obsidian/workspace.json	/^    "children": [$/;"	a	object:left
+children	wiki/.obsidian/workspace.json	/^    "children": [$/;"	a	object:main
+children	wiki/.obsidian/workspace.json	/^    "children": [$/;"	a	object:right
+clean	pack.py	/^def clean(args):$/;"	f
+collapseAll	wiki/.obsidian/workspace.json	/^                "collapseAll": false,$/;"	b	object:left.children.0.children.1.state.state
+collapseAll	wiki/.obsidian/workspace.json	/^                "collapseAll": false,$/;"	b	object:right.children.0.children.0.state.state
+collapsed	wiki/.obsidian/workspace.json	/^    "collapsed": true$/;"	b	object:right
+command-palette	wiki/.obsidian/core-plugins-migration.json	/^  "command-palette": true,$/;"	b
+command-palette:Open command palette	wiki/.obsidian/workspace.json	/^      "command-palette:Open command palette": false$/;"	b	object:left-ribbon.hiddenItems
+create_global_package_args	pack.py	/^def create_global_package_args(id, name):$/;"	f
+create_lock	pack.py	/^def create_lock(config):$/;"	f
+daily-notes	wiki/.obsidian/core-plugins-migration.json	/^  "daily-notes": true,$/;"	b
+daily-notes:Open today's daily note	wiki/.obsidian/workspace.json	/^      "daily-notes:Open today's daily note": false,$/;"	b	object:left-ribbon.hiddenItems
+date	pack.py	/^import datetime as date$/;"	I	nameref:module:datetime
+direction	wiki/.obsidian/workspace.json	/^    "direction": "horizontal",$/;"	s	object:left
+direction	wiki/.obsidian/workspace.json	/^    "direction": "horizontal",$/;"	s	object:right
+direction	wiki/.obsidian/workspace.json	/^    "direction": "vertical"$/;"	s	object:main
+edit	pack.py	/^def edit(args):$/;"	f
+editor-status	wiki/.obsidian/core-plugins-migration.json	/^  "editor-status": true,$/;"	b
+explainSearch	wiki/.obsidian/workspace.json	/^                "explainSearch": false,$/;"	b	object:left.children.0.children.1.state.state
+extraContext	wiki/.obsidian/workspace.json	/^                "extraContext": false,$/;"	b	object:left.children.0.children.1.state.state
+extraContext	wiki/.obsidian/workspace.json	/^                "extraContext": false,$/;"	b	object:right.children.0.children.0.state.state
+file	wiki/.obsidian/workspace.json	/^                "file": "Installation.md"$/;"	s	object:right.children.0.children.3.state.state
+file	wiki/.obsidian/workspace.json	/^                "file": "Installation.md",$/;"	s	object:main.children.0.children.0.state.state
+file	wiki/.obsidian/workspace.json	/^                "file": "Installation.md",$/;"	s	object:right.children.0.children.0.state.state
+file	wiki/.obsidian/workspace.json	/^                "file": "Installation.md",$/;"	s	object:right.children.0.children.1.state.state
+file-explorer	wiki/.obsidian/core-plugins-migration.json	/^  "file-explorer": true,$/;"	b
+file-recovery	wiki/.obsidian/core-plugins-migration.json	/^  "file-recovery": true,$/;"	b
+get_current_system	pack.py	/^def get_current_system(config):$/;"	f
+get_global_packages	pack.py	/^def get_global_packages(config):$/;"	f
+get_package_id	pack.py	/^def get_package_id(global_packages, system_packages, package):$/;"	f
+get_package_ids	pack.py	/^def get_package_ids(global_packages, system_packages):$/;"	f
+get_system_packages	pack.py	/^def get_system_packages(config):$/;"	f
+global-search	wiki/.obsidian/core-plugins-migration.json	/^  "global-search": true,$/;"	b
+graph	wiki/.obsidian/core-plugins-migration.json	/^  "graph": true,$/;"	b
+graph:Open graph view	wiki/.obsidian/workspace.json	/^      "graph:Open graph view": false,$/;"	b	object:left-ribbon.hiddenItems
+hiddenItems	wiki/.obsidian/workspace.json	/^    "hiddenItems": {$/;"	o	object:left-ribbon
+id	wiki/.obsidian/workspace.json	/^            "id": "0c76547b1403642c",$/;"	s	object:right.children.0.children.2
+id	wiki/.obsidian/workspace.json	/^            "id": "0df63d47aee36e19",$/;"	s	object:right.children.0.children.0
+id	wiki/.obsidian/workspace.json	/^            "id": "11f14fafc0af3cef",$/;"	s	object:right.children.0.children.1
+id	wiki/.obsidian/workspace.json	/^            "id": "30fda6710b03a8f1",$/;"	s	object:left.children.0.children.1
+id	wiki/.obsidian/workspace.json	/^            "id": "40c0454a4eb0cd20",$/;"	s	object:right.children.0.children.3
+id	wiki/.obsidian/workspace.json	/^            "id": "441467f9aeddf248",$/;"	s	object:left.children.0.children.2
+id	wiki/.obsidian/workspace.json	/^            "id": "a521e1be796357f6",$/;"	s	object:left.children.0.children.0
+id	wiki/.obsidian/workspace.json	/^            "id": "bb8bfadea6abdce1",$/;"	s	object:main.children.0.children.0
+id	wiki/.obsidian/workspace.json	/^        "id": "20ef772872abf13a",$/;"	s	object:main.children.0
+id	wiki/.obsidian/workspace.json	/^        "id": "4296fdb3802bcd34",$/;"	s	object:right.children.0
+id	wiki/.obsidian/workspace.json	/^        "id": "c8512c828a4fe56a",$/;"	s	object:left.children.0
+id	wiki/.obsidian/workspace.json	/^    "id": "3e022ecf536afd13",$/;"	s	object:left
+id	wiki/.obsidian/workspace.json	/^    "id": "7fd7644eb2d0b917",$/;"	s	object:right
+id	wiki/.obsidian/workspace.json	/^    "id": "81616a2fb55e14bd",$/;"	s	object:main
+install	pack.py	/^def install(args):$/;"	f
+lastOpenFiles	wiki/.obsidian/workspace.json	/^  "lastOpenFiles": [$/;"	a
+left	wiki/.obsidian/workspace.json	/^  "left": {$/;"	o
+left-ribbon	wiki/.obsidian/workspace.json	/^  "left-ribbon": {$/;"	o
+linksCollapsed	wiki/.obsidian/workspace.json	/^                "linksCollapsed": false,$/;"	b	object:right.children.0.children.1.state.state
+lock_file	pack.py	/^lock_file = "pack.lock"$/;"	v
+main	wiki/.obsidian/workspace.json	/^  "main": {$/;"	o
+markdown-importer	wiki/.obsidian/core-plugins-migration.json	/^  "markdown-importer": false,$/;"	b
+matchingCase	wiki/.obsidian/workspace.json	/^                "matchingCase": false,$/;"	b	object:left.children.0.children.1.state.state
+mode	wiki/.obsidian/workspace.json	/^                "mode": "source",$/;"	s	object:main.children.0.children.0.state.state
+note-composer	wiki/.obsidian/core-plugins-migration.json	/^  "note-composer": true,$/;"	b
+open_toml	pack.py	/^def open_toml(file: str):$/;"	f
+outgoing-link	wiki/.obsidian/core-plugins-migration.json	/^  "outgoing-link": true,$/;"	b
+outline	wiki/.obsidian/core-plugins-migration.json	/^  "outline": true,$/;"	b
+page-preview	wiki/.obsidian/core-plugins-migration.json	/^  "page-preview": true,$/;"	b
+properties	wiki/.obsidian/core-plugins-migration.json	/^  "properties": false,$/;"	b
+publish	wiki/.obsidian/core-plugins-migration.json	/^  "publish": false,$/;"	b
+query	wiki/.obsidian/workspace.json	/^                "query": "",$/;"	s	object:left.children.0.children.1.state.state
+random-note	wiki/.obsidian/core-plugins-migration.json	/^  "random-note": false,$/;"	b
+read_config	pack.py	/^def read_config():$/;"	f
+read_or_create_lock	pack.py	/^def read_or_create_lock(config):$/;"	f
+remove	pack.py	/^def remove(args):$/;"	f
+replace	pack.py	/^    def replace(self, dictionary: dict):$/;"	m	class:PackTemplate
+right	wiki/.obsidian/workspace.json	/^  "right": {$/;"	o
+run_arbitrary	pack.py	/^def run_arbitrary(args):$/;"	f
+run_command	pack.py	/^def run_command(cmd, config, args=None):$/;"	f
+searchQuery	wiki/.obsidian/workspace.json	/^                "searchQuery": "",$/;"	s	object:right.children.0.children.0.state.state
+setup_parser	pack.py	/^def setup_parser():$/;"	f
+showSearch	wiki/.obsidian/workspace.json	/^                "showSearch": false,$/;"	b	object:right.children.0.children.0.state.state
+slash-command	wiki/.obsidian/core-plugins-migration.json	/^  "slash-command": false,$/;"	b
+slides	wiki/.obsidian/core-plugins-migration.json	/^  "slides": false,$/;"	b
+sortOrder	wiki/.obsidian/workspace.json	/^                "sortOrder": "alphabetical"$/;"	s	object:left.children.0.children.0.state.state
+sortOrder	wiki/.obsidian/workspace.json	/^                "sortOrder": "alphabetical"$/;"	s	object:left.children.0.children.1.state.state
+sortOrder	wiki/.obsidian/workspace.json	/^                "sortOrder": "alphabetical",$/;"	s	object:right.children.0.children.0.state.state
+sortOrder	wiki/.obsidian/workspace.json	/^                "sortOrder": "frequency",$/;"	s	object:right.children.0.children.2.state.state
+source	wiki/.obsidian/workspace.json	/^                "source": false$/;"	b	object:main.children.0.children.0.state.state
+state	wiki/.obsidian/workspace.json	/^              "state": {$/;"	o	object:left.children.0.children.0.state
+state	wiki/.obsidian/workspace.json	/^              "state": {$/;"	o	object:left.children.0.children.1.state
+state	wiki/.obsidian/workspace.json	/^              "state": {$/;"	o	object:main.children.0.children.0.state
+state	wiki/.obsidian/workspace.json	/^              "state": {$/;"	o	object:right.children.0.children.0.state
+state	wiki/.obsidian/workspace.json	/^              "state": {$/;"	o	object:right.children.0.children.1.state
+state	wiki/.obsidian/workspace.json	/^              "state": {$/;"	o	object:right.children.0.children.2.state
+state	wiki/.obsidian/workspace.json	/^              "state": {$/;"	o	object:right.children.0.children.3.state
+state	wiki/.obsidian/workspace.json	/^              "state": {}$/;"	o	object:left.children.0.children.2.state
+state	wiki/.obsidian/workspace.json	/^            "state": {$/;"	o	object:left.children.0.children.0
+state	wiki/.obsidian/workspace.json	/^            "state": {$/;"	o	object:left.children.0.children.1
+state	wiki/.obsidian/workspace.json	/^            "state": {$/;"	o	object:left.children.0.children.2
+state	wiki/.obsidian/workspace.json	/^            "state": {$/;"	o	object:main.children.0.children.0
+state	wiki/.obsidian/workspace.json	/^            "state": {$/;"	o	object:right.children.0.children.0
+state	wiki/.obsidian/workspace.json	/^            "state": {$/;"	o	object:right.children.0.children.1
+state	wiki/.obsidian/workspace.json	/^            "state": {$/;"	o	object:right.children.0.children.2
+state	wiki/.obsidian/workspace.json	/^            "state": {$/;"	o	object:right.children.0.children.3
+switcher	wiki/.obsidian/core-plugins-migration.json	/^  "switcher": true,$/;"	b
+switcher:Open quick switcher	wiki/.obsidian/workspace.json	/^      "switcher:Open quick switcher": false,$/;"	b	object:left-ribbon.hiddenItems
+sync	wiki/.obsidian/core-plugins-migration.json	/^  "sync": false$/;"	b
+tag-pane	wiki/.obsidian/core-plugins-migration.json	/^  "tag-pane": true,$/;"	b
+templates	wiki/.obsidian/core-plugins-migration.json	/^  "templates": true,$/;"	b
+templates:Insert template	wiki/.obsidian/workspace.json	/^      "templates:Insert template": false,$/;"	b	object:left-ribbon.hiddenItems
+toml	pack.py	/^import tomlkit as toml$/;"	I	nameref:module:tomlkit
+toml_file	pack.py	/^toml_file = "pack.toml"$/;"	v
+type	wiki/.obsidian/workspace.json	/^              "type": "backlink",$/;"	s	object:right.children.0.children.0.state
+type	wiki/.obsidian/workspace.json	/^              "type": "bookmarks",$/;"	s	object:left.children.0.children.2.state
+type	wiki/.obsidian/workspace.json	/^              "type": "file-explorer",$/;"	s	object:left.children.0.children.0.state
+type	wiki/.obsidian/workspace.json	/^              "type": "markdown",$/;"	s	object:main.children.0.children.0.state
+type	wiki/.obsidian/workspace.json	/^              "type": "outgoing-link",$/;"	s	object:right.children.0.children.1.state
+type	wiki/.obsidian/workspace.json	/^              "type": "outline",$/;"	s	object:right.children.0.children.3.state
+type	wiki/.obsidian/workspace.json	/^              "type": "search",$/;"	s	object:left.children.0.children.1.state
+type	wiki/.obsidian/workspace.json	/^              "type": "tag",$/;"	s	object:right.children.0.children.2.state
+type	wiki/.obsidian/workspace.json	/^            "type": "leaf",$/;"	s	object:left.children.0.children.0
+type	wiki/.obsidian/workspace.json	/^            "type": "leaf",$/;"	s	object:left.children.0.children.1
+type	wiki/.obsidian/workspace.json	/^            "type": "leaf",$/;"	s	object:left.children.0.children.2
+type	wiki/.obsidian/workspace.json	/^            "type": "leaf",$/;"	s	object:main.children.0.children.0
+type	wiki/.obsidian/workspace.json	/^            "type": "leaf",$/;"	s	object:right.children.0.children.0
+type	wiki/.obsidian/workspace.json	/^            "type": "leaf",$/;"	s	object:right.children.0.children.1
+type	wiki/.obsidian/workspace.json	/^            "type": "leaf",$/;"	s	object:right.children.0.children.2
+type	wiki/.obsidian/workspace.json	/^            "type": "leaf",$/;"	s	object:right.children.0.children.3
+type	wiki/.obsidian/workspace.json	/^        "type": "tabs",$/;"	s	object:left.children.0
+type	wiki/.obsidian/workspace.json	/^        "type": "tabs",$/;"	s	object:main.children.0
+type	wiki/.obsidian/workspace.json	/^        "type": "tabs",$/;"	s	object:right.children.0
+type	wiki/.obsidian/workspace.json	/^    "type": "split",$/;"	s	object:left
+type	wiki/.obsidian/workspace.json	/^    "type": "split",$/;"	s	object:main
+type	wiki/.obsidian/workspace.json	/^    "type": "split",$/;"	s	object:right
+unlinkedCollapsed	wiki/.obsidian/workspace.json	/^                "unlinkedCollapsed": true$/;"	b	object:right.children.0.children.0.state.state
+unlinkedCollapsed	wiki/.obsidian/workspace.json	/^                "unlinkedCollapsed": true$/;"	b	object:right.children.0.children.1.state.state
+useHierarchy	wiki/.obsidian/workspace.json	/^                "useHierarchy": true$/;"	b	object:right.children.0.children.2.state.state
+width	wiki/.obsidian/workspace.json	/^    "width": 300$/;"	n	object:left
+width	wiki/.obsidian/workspace.json	/^    "width": 300,$/;"	n	object:right
+word-count	wiki/.obsidian/core-plugins-migration.json	/^  "word-count": true,$/;"	b
+workspaces	wiki/.obsidian/core-plugins-migration.json	/^  "workspaces": false,$/;"	b
+write_config	pack.py	/^def write_config(data: str):$/;"	f
+write_toml	pack.py	/^def write_toml(file: str, data: str):$/;"	f
+zk-prefixer	wiki/.obsidian/core-plugins-migration.json	/^  "zk-prefixer": false,$/;"	b

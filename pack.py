@@ -8,9 +8,11 @@ import re
 import datetime as date
 import tomlkit as toml
 ###
+pack_path = os.environ.get('PACK', os.environ["HOME"] + '/.pack')
 
-toml_file = "pack.toml"
-lock_file = "pack.lock"
+
+toml_file = pack_path + "/pack.toml"
+lock_file = pack_path + "/pack.lock"
 
 # A string template for the syntax ${any.any} to access anything within the pack.toml config
 class PackTemplate:
@@ -216,8 +218,6 @@ def run_arbitrary(args):
 
 #creates the argument parser for pack, also the entry point
 def setup_parser():
-    global toml_file
-    global lock_file
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(required=True, help="Action help")
     # changes the file to FILE
